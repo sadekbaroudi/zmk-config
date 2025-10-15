@@ -37,35 +37,35 @@
     combos {
         compatible = "zmk,combos";
         
-        // Missing inner column keys - left side (ffkb position 24: V)
+        // Missing inner column keys - left side (ffkb middle position 14: G)
         combo_left_inner_col {
             timeout-ms = <50>;
             key-positions = <4 14>;
-            bindings = <&kp V>;
+            bindings = <&kp G>;
             layers = <DEFAULT>;
         };
         combo_left_inner_col_nav {
             timeout-ms = <50>;
             key-positions = <4 14>;
-            bindings = <&trans>;
+            bindings = <&kp END>;
             layers = <NAV>;
         };
         combo_left_inner_col_sym {
             timeout-ms = <50>;
             key-positions = <4 14>;
-            bindings = <&caps_word>;
+            bindings = <&kp LT>;
             layers = <SYM>;
         };
         combo_left_inner_col_func {
             timeout-ms = <50>;
             key-positions = <4 14>;
-            bindings = <&kp C_MUTE>;
+            bindings = <&kp LS(END)>;
             layers = <FUNC>;
         };
         combo_left_inner_col_media {
             timeout-ms = <50>;
             key-positions = <4 14>;
-            bindings = <&trans>;
+            bindings = <&bt_clr_led>;
             layers = <MEDIA>;
         };
         combo_left_inner_col_winnav {
@@ -75,35 +75,35 @@
             layers = <WINNAV>;
         };
 
-        // Missing inner column keys - right side (ffkb position 25: K)
+        // Missing inner column keys - right side (ffkb middle position 15: M)
         combo_right_inner_col {
             timeout-ms = <50>;
             key-positions = <5 15>;
-            bindings = <&kp K>;
+            bindings = <&kp M>;
             layers = <DEFAULT>;
         };
         combo_right_inner_col_nav {
             timeout-ms = <50>;
             key-positions = <5 15>;
-            bindings = <&kp EQUAL>;
+            bindings = <&kp FSLH>;
             layers = <NAV>;
         };
         combo_right_inner_col_sym {
             timeout-ms = <50>;
             key-positions = <5 15>;
-            bindings = <&trans>;
+            bindings = <&kp GT>;
             layers = <SYM>;
         };
         combo_right_inner_col_func {
             timeout-ms = <50>;
             key-positions = <5 15>;
-            bindings = <&kp K_VOL_DN>;
+            bindings = <&kp K_VOL_UP>;
             layers = <FUNC>;
         };
         combo_right_inner_col_media {
             timeout-ms = <50>;
             key-positions = <5 15>;
-            bindings = <&ext_power EP_TOG>;
+            bindings = <&bt BT_CLR>;
             layers = <MEDIA>;
         };
         combo_right_inner_col_winnav {
@@ -208,7 +208,7 @@
             display-name = "Default";
             bindings = <
             &kp Q           &kp W           &kp F           &kp P           &kp B                                           &kp J           &kp L           &lt WINNAV U    &kp Y           &kp SEMI
-            &hm LCTL A      &hm LGUI R      &hm LALT S      &hs LSHIFT T    &kp G                                           &kp M           &hs RSHIFT N    &hm RALT E      &hm RGUI I      &hm RCTL O
+            &hm LCTL A      &hm LGUI R      &hm LALT S      &hs LSHIFT T    &kp V                                           &kp K           &hs RSHIFT N    &hm RALT E      &hm RGUI I      &hm RCTL O
             &kp Z           &kp X           &kp C           &kp D                                                                           &kp H           &kp COMMA       &kp DOT         &kp FSLH
                                                             &kp DEL         &lt FUNC TAB                    &lt MEDIA BSPC  &kp SQT
             >;
@@ -218,7 +218,7 @@
             display-name = "Nav";
             bindings = <
             &kp ESC         &kp PG_UP       &kp UP          &kp PG_DN       &trans                                          &kp ASTRK       &kp N7          &kp N8          &kp N9          &kp MINUS
-            &kp HOME        &kp LEFT        &kp DOWN        &kp RIGHT       &kp END                                         &kp FSLH        &kp N4          &kp N5          &kp N6          &kp PLUS
+            &kp HOME        &kp LEFT        &kp DOWN        &kp RIGHT       &trans                                          &kp EQUAL       &kp N4          &kp N5          &kp N6          &kp PLUS
             &trans          &trans          &trans          &trans                                                                          &kp N1          &kp N2          &kp N3          &kp N0
                                                                             &trans          &kp TAB         &kp BSPC        &kp DOT
             >;
@@ -228,7 +228,7 @@
             display-name = "Sym";
             bindings = <
             &kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PRCNT                                       &kp CARET       &kp AMPS        &kp ASTRK       &kp UNDER       &kp EQUAL
-            &kp MINUS       &kp LBKT        &kp LBRC        &kp LPAR        &kp LT                                          &kp GT          &kp RPAR        &kp RBRC        &kp RBKT        &kp PLUS
+            &kp MINUS       &kp LBKT        &kp LBRC        &kp LPAR        &caps_word                                      &trans          &kp RPAR        &kp RBRC        &kp RBKT        &kp PLUS
             &kp CAPS        &kp GRAVE       &kp LC(LS(TAB)) &kp LC(LG(LEFT))                                                                &kp LC(LG(RIGHT)) &kp LC(TAB)   &trans          &kp BSLH
                                                                             &trans          &kp DEL         &kp BSPC        &trans
             >;
@@ -238,7 +238,7 @@
             display-name = "Func";
             bindings = <
             &bootloader     &kp LS(PG_UP)   &kp LS(UP)      &kp LS(PG_DN)   &trans                                          &kp C_PLAY_PAUSE &kp F7         &kp F8          &kp F9          &kp F10
-            &kp LS(HOME)    &kp LS(LEFT)    &kp LS(DOWN)    &kp LS(RIGHT)   &kp LS(END)                                     &kp K_VOL_UP    &kp F4          &kp F5          &kp F6          &kp F11
+            &kp LS(HOME)    &kp LS(LEFT)    &kp LS(DOWN)    &kp LS(RIGHT)   &kp C_MUTE                                      &kp K_VOL_DN    &kp F4          &kp F5          &kp F6          &kp F11
             &trans          &trans          &trans          &trans                                                                          &kp F1          &kp F2          &kp F3          &kp F12
                                                                             &trans          &trans          &trans          &trans
             >;
@@ -248,7 +248,7 @@
             display-name = "Media";
             bindings = <
             &trans          &trans          &trans          &trans          &trans                                          &ind_con        &bt BT_PRV      &bt BT_NXT         &trans        &ind_bat
-            &bt_sel_led 0   &bt_sel_led 1   &bt_sel_led 2   &bt_sel_led 3   &bt_clr_led                                     &bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 1       &bt BT_SEL 2  &bt BT_SEL 3
+            &bt_sel_led 0   &bt_sel_led 1   &bt_sel_led 2   &bt_sel_led 3   &trans                                          &ext_power EP_TOG &bt BT_SEL 0  &bt BT_SEL 1       &bt BT_SEL 2  &bt BT_SEL 3
             &trans          &trans          &trans          &trans                                                                          &ext_power EP_ON &ext_power EP_OFF &out OUT_USB  &out OUT_BLE
                                                                             &trans          &trans          &trans          &trans
             >;
