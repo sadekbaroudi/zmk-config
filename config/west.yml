@@ -1,0 +1,23 @@
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: carrefinho
+      url-base: https://github.com/carrefinho
+    - name: sadekbaroudi
+      url-base: https://github.com/sadekbaroudi
+  projects:
+    - name: zmk
+      remote: zmkfirmware
+      revision: main
+      import: app/west.yml
+    - name: zmk-keyboards-visorbearer
+      repo-path: visorbearer-zmk-module
+      remote: carrefinho
+      revision: main
+    - name: zmk-fingerpunch-keyboards
+      remote: sadekbaroudi
+      revision: main
+      import: config/deps.yml
+  self:
+    path: config
